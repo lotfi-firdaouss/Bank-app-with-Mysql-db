@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/darkStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.views.ModifyEmployeeController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label text="Table of employees">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="40.0">
+              <columns>
+                <TableColumn fx:id="id_employeColumn" prefWidth="116.0" text="Identifier" />
+                <TableColumn fx:id="id_agenceColumn" onEditCommit="#changeIdAgencyCellEvent" prefWidth="116.0" text="Resp. Agency" />
+                  <TableColumn fx:id="nomColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="116.0" text="Last name" />
+                  <TableColumn fx:id="prenomColumn" onEditCommit="#changeFirstNameCellEvent" prefWidth="116.0" text="First name" />
+                  <TableColumn fx:id="date_embaucheColumn" prefWidth="116.0" text="Hiring date" />
+              </columns>
+            </TableView>
+            <Label text="To change information in cells double click ,type the new information and then click on enter.">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label text="P.S. The Identifier and hiring date cell aren't changeable !" textFill="#da2323" />
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButtonAction" text="Cancel" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/darkStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.views.InterfaceRHController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#gointerfaceEmployee" prefHeight="80.0" text="Employee Space" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#gointerfaceRH" prefHeight="80.0" text="HR Space" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#gointerfaceClient" prefHeight="80.0" text="Client Space" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#goHome" prefHeight="80.0" text="Home" />
+            <Button maxWidth="200.0" mnemonicParsing="false" prefHeight="80.0" text="Settings" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutX="-3.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="6.0" />
+            <VBox prefHeight="500.0" prefWidth="500.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label text="Employees Management">
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="120.0" prefWidth="200.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#EmployeeAddBtn" prefHeight="100.0" prefWidth="100.0" text="      Add a &#10;new employee">
+                           <HBox.margin>
+                              <Insets left="120.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#ModifyEmployeeBtn" prefHeight="100.0" prefWidth="100.0" text="     Modify&#10; an employee" />
+                        <Button mnemonicParsing="false" onAction="#DeleteEmployeeBtn" prefHeight="100.0" prefWidth="100.0" text="     Delete &#10;an employee" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
